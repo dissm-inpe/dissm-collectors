@@ -87,6 +87,54 @@ Output::
 Examples
 ========
 
+See ``examples`` folder.
+
+GOES-16 Data
+------------
+
+.. code-block:: python
+
+    from flask import Flask
+    from bdc_collectors import CollectorExtension
+    
+    app = Flask(__name__)
+    ext = CollectorExtension(app)
+    
+    # Get specific GOES collector
+    provider = ext.get_provider('GOES')()
+    
+    # Search scenes from 2024/02/01 until 2024/02/02, GOES-16/Band 13
+    scenes = provider.search(
+        query='GOES-16', band='13',
+        start_date='20240201', end_date='20240202'
+    )
+
+    # Download first scene
+    provider.download(scenes[0].scene_id, output_dir='./')
+
+GOES-13 Data
+------------
+
+.. code-block:: python
+
+    from flask import Flask
+    from bdc_collectors import CollectorExtension
+
+    app = Flask(__name__)
+    ext = CollectorExtension(app)
+
+    # Get specific GOES collector
+    provider = ext.get_provider('GOES')()
+
+    # Search scenes from 2016/04/08 until 2016/04/09, GOES-13/Band 04
+    scenes = provider.search(
+        query='GOES-13', band='04',
+        start_date='20160408', end_date='20160409'
+    )
+
+    # Download first scene
+    provider.download(scenes[0].scene_id, output_dir='./')
+
 License
 =======
 

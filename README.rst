@@ -9,7 +9,7 @@ DISSM-Collectors is a Flask extension following `Brazil Data Cube Collectors <ht
 
 We define our custom collectors using Python entry point in ``setup.py``.
 
-Note: It is an experimental implementation under development.
+⚠️ Note: It is an experimental implementation under development.
 
 Installation
 ============

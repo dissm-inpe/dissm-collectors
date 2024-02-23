@@ -60,6 +60,30 @@ Install in development mode::
 
         pip3 install --upgrade setuptools
 
+Usage
+=====
+
+In order to verify if extension is enabled, use the ``bdc-collector show-providers`` command::
+
+    bdc-collector show-providers
+
+Output::
+
+    BDC-Collectors  Copyright (C) 2023  INPE
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+    Supported providers:
+        CREODIAS
+        Dataspace
+        DGI
+        Google
+        MODIS
+        ONDA
+        SciHub
+        USGS
+        GOES <===
+
 Examples
 ========
 

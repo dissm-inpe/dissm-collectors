@@ -9,10 +9,59 @@ DISSM-Collectors is a Flask extension following `Brazil Data Cube Collectors <ht
 
 We define our custom collectors using Python entry point in ``setup.py``.
 
-Note: It is an experimental implementation.
+Note: It is an experimental implementation under development.
 
 Installation
 ============
+
+Development installation
+------------------------
+
+Pre-Requirements
+++++++++++++++++
+
+The ``DISSM Collectors`` (``DISSM-Collectors``) depends essentially on:
+
+- `Brazil Data Cube Collectors <https://github.com/brazil-data-cube/bdc-collectors>`_
+
+Clone the software repository
++++++++++++++++++++++++++++++
+
+Use ``git`` to clone the software repository::
+
+    git clone https://github.com/dissm-inpe/dissm-collectors.git
+
+Install DISSM-Collectors in Development Mode
+++++++++++++++++++++++++++++++++++++++++++
+
+Go to the source code folder::
+
+    cd dissm-collectors
+
+Install in development mode::
+
+    pip3 install -e .
+
+.. note::
+
+    If you want to create a new *Python Virtual Environment*, please, follow this instruction:
+
+    *1.* Create a new virtual environment linked to Python 3.11::
+
+        python3.11 -m venv venv
+
+    **2.** Activate the new environment::
+
+        source venv/bin/activate
+
+    **3.** Update pip and setuptools::
+
+        pip3 install --upgrade pip
+
+        pip3 install --upgrade setuptools
+
+Examples
+========
 
 License
 =======
